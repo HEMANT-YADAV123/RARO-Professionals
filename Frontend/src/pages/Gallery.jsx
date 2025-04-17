@@ -1,17 +1,16 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 
-const Home = () => {
+const Gallery = () => {
   return (
     <div className="pt-32">
       <div
         className="text-[#c17e14]"
         style={{ fontFamily: "Playball, cursive" }}
       >
-        Welcome to Home Page
+        Welcome to Gallery Page
       </div>
     </div>
   );
 };
 
-export default Home;
+export default Gallery;
