@@ -1,15 +1,22 @@
 import React from "react";
+import Hero from "../components/Hero";
+import Services from "../components/AboutServices";
+import Reassurance from "../components/Reassurance";
+import MeetFounder from "../components/MeetFounder";
+import Footer from "../components/Footer";
 
 const Aboutus = () => {
   return (
-    <div className="pt-32">
       <div
-        className="text-[#c17e14]"
+        className="min-h-screen bg-[#141414] text-white"
         style={{ fontFamily: "Playball, cursive" }}
       >
-        Welcome to Aboutus Page
+        <MeetFounder />
+        <Reassurance />
+        <Services />
+        <Hero />
+        <Footer/>
       </div>
-    </div>
   );
 };
 
