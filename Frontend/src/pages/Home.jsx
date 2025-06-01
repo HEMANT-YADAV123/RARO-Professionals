@@ -5,6 +5,7 @@ import ImageSlider from "../components/imagesSlider";
 import Intro from "../components/Intro";
 import ReviewSection from "../components/review/ReviewSection";
 import ReelsSection from "../components/instagram/ReelsSection";
+import Contactus from "./Contactus";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
         <Intro/>
         <ReviewSection/>
         <ReelsSection/>
+        <Contactus/>
       </div>
     </div>
   );
