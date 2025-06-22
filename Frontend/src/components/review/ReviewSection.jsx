@@ -21,7 +21,7 @@ const ReviewSection = () => {
       setFilteredReviews(reviews.filter(review => review.service === activeFilter));
     }
     setCurrentIndex(0);
-  }, [activeFilter]);
+  }, [activeFilter]); 
 
   useEffect(() => {
     if (!isAutoPlaying) return;
@@ -111,7 +111,7 @@ const ReviewSection = () => {
             ))}
           </div>
 
-          <div className="absolute top-1/2 left-0 w-full flex justify-between items-center px-4 -translate-y-1/2">
+          <div className="absolute top-1/2 left-0 w-full justify-between items-center px-4 -translate-y-1/2 hidden md:flex">
             <button 
               onClick={handlePrevious}
               className="bg-black/50 hover:bg-black text-yellow-400 p-3 rounded-full transform transition-all duration-500 hover:scale-110 hover:shadow-[0_0_15px_rgba(212,175,55,0.3)] border border-yellow-400"

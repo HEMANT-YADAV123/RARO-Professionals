@@ -13,7 +13,7 @@ const Intro = () => {
 
         <h2 className="text-3xl font-semibold  bg-gradient-to-r from-yellow-300 to-yellow-600 text-transparent bg-clip-text"
           style={{ fontFamily: "Playball, cursive" }}>THE WONDER BEHIND THE MAGIC</h2>
-      </div>
+      </div> 
 
       <div className="flex flex-col md:flex-row items-center gap-12">
         {/* Text Content (Left Side) */}
