@@ -21,7 +21,7 @@ const ReviewSection = () => {
       setFilteredReviews(reviews.filter(review => review.service === activeFilter));
     }
     setCurrentIndex(0);
-  }, [activeFilter]);
+  }, [activeFilter]); 
 
   useEffect(() => {
     if (!isAutoPlaying) return;
