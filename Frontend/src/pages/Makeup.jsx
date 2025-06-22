@@ -3,7 +3,7 @@ import ServiceSection from "../components/makeup/ServiceSection";
 
 const Makeup = () => {
   return (
-    <div className="pt-32">
+    <div className="mt-10 mb-36 md:mb-0 md:mt-24">
       <div className="min-h-screen bg-black">
       <main>
         <ServiceSection

@@ -123,7 +123,7 @@ const BridalSlider = () => {
       <div className="relative">
         <div 
           ref={sliderRef}
-          className="relative h-96 md:h-[500px] lg:h-[600px] overflow-hidden  shadow-2xl cursor-grab active:cursor-grabbing"
+          className="relative h-[500px] md:h-[500px] lg:h-[600px] overflow-hidden  shadow-2xl cursor-grab active:cursor-grabbing"
           onMouseDown={handleDragStart}
           onTouchStart={handleDragStart}
           onMouseEnter={stopAutoplay}
@@ -149,9 +149,9 @@ const BridalSlider = () => {
                 <motion.img
                   src={slides[currentSlide].image}
                   alt={slides[currentSlide].quote}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover md:object-fill lg:object-contain"
                   whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.6 }}
+                  transition={{ duration: 2 }}
                 />
                 
                 {/* Gradient Overlay */}

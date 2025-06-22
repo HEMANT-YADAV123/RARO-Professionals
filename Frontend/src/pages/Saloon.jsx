@@ -89,7 +89,7 @@ function Saloon() {
   };
 
   return (
-    <div className="min-h-screen mt-25 bg-black text-white font-inter relative overflow-hidden">
+    <div className="min-h-screen mt-24 bg-black text-white font-inter relative overflow-hidden">
       {/* Static Background Elements */}
       <div className="fixed inset-0 pointer-events-none">
         {/* Primary Golden Orbs - Static */}
