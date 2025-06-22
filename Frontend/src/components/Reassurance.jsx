@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Star } from 'lucide-react';
-import StressImage from "../assets/Bride.jpg"
+import StressImage from "../assets/bride5.jpg"
 
 const StressSection = () => {
   return (
