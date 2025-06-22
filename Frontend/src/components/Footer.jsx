@@ -29,7 +29,7 @@ const Footer = () => {
                 Airbrush Makeup
               </li>
               <li className="hover:text-amber-500 transition-all duration-300 cursor-pointer">
-                Destination Makeup
+                Luxury
               </li>
             </ul>
           </div>

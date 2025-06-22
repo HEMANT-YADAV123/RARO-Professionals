@@ -1,11 +1,11 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import Services from "../components/services";
 import ImageSlider from "../components/imagesSlider";
 import Intro from "../components/Intro";
 import ReviewSection from "../components/review/ReviewSection";
 import ReelsSection from "../components/instagram/ReelsSection";
 import Contactus from "./Contactus";
+import Services from "../components/Services";
 
 const Home = () => {
   return (

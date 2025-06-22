@@ -1,58 +1,150 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 
 const ContactRight = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [focusedField, setFocusedField] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    message: ''
+  });
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const handleInputChange = (field, value) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Add form submission logic here
+    console.log('Form submitted:', formData);
+  };
+
   return (
     <div className="flex items-center justify-center p-2 md:p-4">
-      <div className="bg-[#191919] text-gold p-4 md:p-6 lg:p-8 rounded-2xl w-full">
-        <h1 className="text-2xl md:text-3xl font-bold text-center text-[#c17e14] mb-4 md:mb-6"
-            style={{ fontFamily: "Playball, cursive" }}>
-            Get in Touch
+      <div 
+        className={`bg-[#191919] text-gold p-4 md:p-6 lg:p-8 rounded-2xl w-full shadow-2xl hover:shadow-3xl transition-all duration-500 transform ${
+          isVisible ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-8 opacity-0 scale-95'
+        }`}
+        style={{ transitionDelay: '0.2s' }}
+      >
+        <h1 
+          className={`text-2xl md:text-3xl font-bold text-center text-[#c17e14] mb-4 md:mb-6 transform transition-all duration-700 ease-out ${
+            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+          }`}
+          style={{ fontFamily: "Playball, cursive", transitionDelay: '0.4s' }}
+        >
+          Get in Touch
         </h1>
         
-        <form className="space-y-3 md:space-y-4">
-          <div className='flex flex-col gap-1 md:gap-2'>
-            <label className="block text-[#c17e14]">Name</label>
+        <form className="space-y-3 md:space-y-4" onSubmit={handleSubmit}>
+          <div 
+            className={`flex flex-col gap-1 md:gap-2 transform transition-all duration-700 ease-out ${
+              isVisible ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'
+            }`}
+            style={{ transitionDelay: '0.5s' }}
+          >
+            <label className="block text-[#c17e14] transition-colors duration-300 hover:text-[#d4921a]">Name</label>
             <input
               type="text"
-              className="w-full p-2 md:p-3 bg-black text-white border border-yellow-500 rounded-lg focus:outline-none focus:border-yellow-400"
+              value={formData.name}
+              onChange={(e) => handleInputChange('name', e.target.value)}
+              onFocus={() => setFocusedField('name')}
+              onBlur={() => setFocusedField('')}
+              className={`w-full p-2 md:p-3 bg-black text-white border rounded-lg transition-all duration-300 ease-out transform ${
+                focusedField === 'name' 
+                  ? 'border-yellow-400 scale-[1.02] shadow-lg shadow-yellow-500/20' 
+                  : 'border-yellow-500 hover:border-yellow-400 hover:shadow-md'
+              }`}
               placeholder="Enter your name"
             />
           </div>
 
-          <div className='flex flex-col gap-1 md:gap-2'>
-            <label className="block text-[#c17e14]">Phone</label>
+          <div 
+            className={`flex flex-col gap-1 md:gap-2 transform transition-all duration-700 ease-out ${
+              isVisible ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'
+            }`}
+            style={{ transitionDelay: '0.6s' }}
+          >
+            <label className="block text-[#c17e14] transition-colors duration-300 hover:text-[#d4921a]">Phone</label>
             <input
               type="tel"
-              className="w-full p-2 md:p-3 bg-black text-white border border-yellow-500 rounded-lg focus:outline-none focus:border-yellow-400"
+              value={formData.phone}
+              onChange={(e) => handleInputChange('phone', e.target.value)}
+              onFocus={() => setFocusedField('phone')}
+              onBlur={() => setFocusedField('')}
+              className={`w-full p-2 md:p-3 bg-black text-white border rounded-lg transition-all duration-300 ease-out transform ${
+                focusedField === 'phone' 
+                  ? 'border-yellow-400 scale-[1.02] shadow-lg shadow-yellow-500/20' 
+                  : 'border-yellow-500 hover:border-yellow-400 hover:shadow-md'
+              }`}
               placeholder="Enter your phone number"
             />
           </div>
 
-          <div className='flex flex-col gap-1 md:gap-2'>
-            <label className="block text-[#c17e14]">Email</label>
+          <div 
+            className={`flex flex-col gap-1 md:gap-2 transform transition-all duration-700 ease-out ${
+              isVisible ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'
+            }`}
+            style={{ transitionDelay: '0.7s' }}
+          >
+            <label className="block text-[#c17e14] transition-colors duration-300 hover:text-[#d4921a]">Email</label>
             <input
               type="email"
-              className="w-full p-2 md:p-3 bg-black text-white border border-yellow-500 rounded-lg focus:outline-none focus:border-yellow-400"
+              value={formData.email}
+              onChange={(e) => handleInputChange('email', e.target.value)}
+              onFocus={() => setFocusedField('email')}
+              onBlur={() => setFocusedField('')}
+              className={`w-full p-2 md:p-3 bg-black text-white border rounded-lg transition-all duration-300 ease-out transform ${
+                focusedField === 'email' 
+                  ? 'border-yellow-400 scale-[1.02] shadow-lg shadow-yellow-500/20' 
+                  : 'border-yellow-500 hover:border-yellow-400 hover:shadow-md'
+              }`}
               placeholder="Enter your email"
             />
           </div>
 
-          <div className='flex flex-col gap-1 md:gap-2'>
-            <label className="block text-[#c17e14]">Message</label>
+          <div 
+            className={`flex flex-col gap-1 md:gap-2 transform transition-all duration-700 ease-out ${
+              isVisible ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'
+            }`}
+            style={{ transitionDelay: '0.8s' }}
+          >
+            <label className="block text-[#c17e14] transition-colors duration-300 hover:text-[#d4921a]">Message</label>
             <textarea
-              rows="3"
-              className="w-full p-2 md:p-3 bg-black text-white border border-yellow-500 rounded-lg focus:outline-none focus:border-yellow-400"
+              rows={3}
+              value={formData.message}
+              onChange={(e) => handleInputChange('message', e.target.value)}
+              onFocus={() => setFocusedField('message')}
+              onBlur={() => setFocusedField('')}
+              className={`w-full p-2 md:p-3 bg-black text-white border rounded-lg transition-all duration-300 ease-out transform resize-none ${
+                focusedField === 'message' 
+                  ? 'border-yellow-400 scale-[1.02] shadow-lg shadow-yellow-500/20' 
+                  : 'border-yellow-500 hover:border-yellow-400 hover:shadow-md'
+              }`}
               placeholder="Write your message..."
-            ></textarea>
+            />
           </div>
 
-          <button className="w-full mt-3 md:mt-4 bg-yellow-500 text-black font-bold py-2 md:py-3 rounded-lg hover:bg-yellow-600 transition duration-300 cursor-pointer">
-            Send Message
+          <button 
+            type="submit"
+            className={`w-full mt-3 md:mt-4 bg-yellow-500 text-black font-bold py-2 md:py-3 rounded-lg transition-all duration-300 cursor-pointer transform hover:bg-yellow-600 hover:scale-105 hover:shadow-lg active:scale-95 ${
+              isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+            }`}
+            style={{ transitionDelay: '0.9s' }}
+          >
+            <span className="inline-block transition-transform duration-200 hover:scale-105">
+              Send Message
+            </span>
           </button>
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ContactRight
+export default ContactRight;

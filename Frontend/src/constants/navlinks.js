@@ -10,18 +10,13 @@ export const navLinksdata =[
         link:"/Aboutus",
     },
     {
-        _id:1003,
-        title:"Gallery",
-        link:"/Gallery",
-    },
-    {
         _id:1004,
         title:"Makeup",
         link:"/Makeup",
     },
     {
         _id:1005,
-        title:"Saloon",
+        title:"Salon",
         link:"/Saloon",
     },
     {

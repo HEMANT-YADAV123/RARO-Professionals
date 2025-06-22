@@ -2,8 +2,11 @@ import React from "react";
 import Hero from "../components/Hero";
 import Services from "../components/AboutServices";
 import Reassurance from "../components/Reassurance";
-import MeetFounder from "../components/MeetFounder";
 import Footer from "../components/Footer";
+import HeroSection from "../components/MeetFounder";
+import StressSection from "../components/Reassurance";
+import CTASection from "../components/Hero";
+import ServicesSection from "../components/AboutServices";
 
 const Aboutus = () => {
   return (
@@ -11,10 +14,10 @@ const Aboutus = () => {
         className="min-h-screen bg-[#141414] text-white"
         style={{ fontFamily: "Playball, cursive" }}
       >
-        <MeetFounder />
-        <Reassurance />
-        <Services />
-        <Hero />
+        <HeroSection/>
+        <StressSection/>
+        <ServicesSection/>
+        <CTASection/>
         <Footer/>
       </div>
   );
