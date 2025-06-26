@@ -9,6 +9,9 @@ const ContactRight = () => {
     email: '',
     message: ''
   });
+  const [errorMsg, setErrorMsg] = useState('');
+  const [successMsg, setSuccessMsg] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -18,10 +21,79 @@ const ContactRight = () => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add form submission logic here
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setErrorMsg('');
+    setSuccessMsg('');
+
+    // Validate form fields
+    if (!formData.name.trim()) {
+      setErrorMsg("Name is required!");
+      setIsSubmitting(false);
+      return;
+    } else if (!formData.phone.trim()) {
+      setErrorMsg("Phone number is required!");
+      setIsSubmitting(false);
+      return;
+    } else if (!formData.email.trim()) {
+      setErrorMsg("Please enter your email");
+      setIsSubmitting(false);
+      return;
+    } else if (!validateEmail(formData.email)) {
+      setErrorMsg("Please enter a valid email");
+      setIsSubmitting(false);
+      return;
+    } else if (!formData.message.trim()) {
+      setErrorMsg("Message is required");
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost:5000/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          Name: formData.name,
+          phoneNumber: formData.phone,
+          Email: formData.email,
+          Message: formData.message
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      setSuccessMsg(`Thank you ${formData.name}, your message has been sent successfully!`);
+      
+      // Clear the form
+      setFormData({
+        name: '',
+        phone: '',
+        email: '',
+        message: ''
+      });
+
+    } catch (error) {
+      console.error("Error sending email:", error);
+      setErrorMsg("Failed to send message. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+      // Clear messages after 3 seconds
+      setTimeout(() => {
+        setSuccessMsg('');
+        setErrorMsg('');
+      }, 3000);
+    }
   };
 
   return (
@@ -41,6 +113,18 @@ const ContactRight = () => {
           Get in Touch
         </h1>
         
+        {/* Success and Error Messages */}
+        {successMsg && (
+          <div className="mb-4 p-3 bg-green-100 text-green-700 rounded-lg transition-all duration-300">
+            {successMsg}
+          </div>
+        )}
+        {errorMsg && (
+          <div className="mb-4 p-3 bg-red-100 text-red-700 rounded-lg transition-all duration-300">
+            {errorMsg}
+          </div>
+        )}
+
         <form className="space-y-3 md:space-y-4" onSubmit={handleSubmit}>
           <div 
             className={`flex flex-col gap-1 md:gap-2 transform transition-all duration-700 ease-out ${
@@ -132,13 +216,14 @@ const ContactRight = () => {
 
           <button 
             type="submit"
+            disabled={isSubmitting}
             className={`w-full mt-3 md:mt-4 bg-yellow-500 text-black font-bold py-2 md:py-3 rounded-lg transition-all duration-300 cursor-pointer transform hover:bg-yellow-600 hover:scale-105 hover:shadow-lg active:scale-95 ${
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
-            }`}
+            } ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
             style={{ transitionDelay: '0.9s' }}
           >
             <span className="inline-block transition-transform duration-200 hover:scale-105">
-              Send Message
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </span>
           </button>
         </form>
