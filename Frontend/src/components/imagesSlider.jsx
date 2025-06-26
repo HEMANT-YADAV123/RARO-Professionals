@@ -2,35 +2,36 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
+
 const slides = [
   {
     id: 1,
-    image: './slider.jpg',
+    image: './slider.webp',
     quote: 'Best Makeup Artist'
   },
   {
     id: 2,
-    image: './A.jpg',
+    image: './A.webp',
     quote: 'Professional Bridal Looks'
   },
   {
     id: 3,
-    image: './bridal.jpg',
+    image: './bridal.webp',
     quote: 'Transforming Beauty with Elegance'
   },
   {
     id: 4,
-    image: './CC.jpg',
+    image: './CC.webp',
     quote: 'Your Dream Look Awaits'
   },
   {
     id: 5,
-    image: './B.jpg',
+    image: './B.webp',
     quote: 'Flawless Finish for Every Occasion'
   },
   {
     id: 6,
-    image: './FF.jpg',
+    image: './FF.webp',
     quote: 'Luxury Bridal Experience'
   }
 ];
@@ -149,6 +150,7 @@ const BridalSlider = () => {
                 <motion.img
                   src={slides[currentSlide].image}
                   alt={slides[currentSlide].quote}
+                  loading="lazy"
                   className="w-full h-full object-cover md:object-fill lg:object-contain"
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 2 }}

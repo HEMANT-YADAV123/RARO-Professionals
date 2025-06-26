@@ -31,7 +31,7 @@ export const reviews = [
     name: "Ritu Khatri",
     avatar: "./review4.png",
     rating: 5,
-    text: "Hi... 🙋Thank you Raro professional team for beautiful makeover💄.. Such perfect makeup never experienced before .. No caky foundation.. No cracks despite of dancing.. Sweating..😇Infact the glow increased ... Thanks to Rohit & pooja as well for wonderful Hairdo and Makeup..with girly look.. N not to forget the highlight done by Rohit is fabulous💁and it was more visible beautifully in this hairdo ... Overall fantabulous makeup👌... Each one complimented me ☺☺and asked about your Makeup studio... Wonderful work👍... Keep making beautiful everyone ☺☺",
+    text: "Hi... 🙋Thank you Raro professional team for beautiful makeover💄.. Such perfect makeup never experienced before .. No caky foundation.. No cracks despite of dancing.. Sweating..😇Infact the glow increased . Thanks to Rohit & pooja as well for wonderful Hairdo and Makeup..with girly look. Overall fantabulous makeup ☺",
     service: "makeup",
     featured: false
   },
