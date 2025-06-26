@@ -1,0 +1,27 @@
+export const navLinksdata =[
+    {
+        _id:1001,
+        title:"Home",
+        link:"/",
+    },
+    {
+        _id:1002,
+        title:"Aboutus",
+        link:"/Aboutus",
+    },
+    {
+        _id:1004,
+        title:"Makeup",
+        link:"/Makeup",
+    },
+    {
+        _id:1005,
+        title:"Salon",
+        link:"/Saloon",
+    },
+    {
+        _id:1006,
+        title:"ContactUs",
+        link:"/Contactus",
+    },
+]
