@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { navLinksdata } from "../constants/navlinks";
 import { Menu, X } from "lucide-react";
 
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,9 +30,11 @@ const Navbar = () => {
     <div className={`bg-black flex items-center w-full fixed top-0 z-50 transition-all duration-300 ${isScrolled ? 'h-20 shadow-lg' : 'h-24 md:h-32'}`}>
       <div className="flex w-full items-center justify-between px-4 md:px-8 lg:px-16">
         {/* Logo */}
-        <div className={`flex items-center transition-all duration-300 ${isScrolled ? 'h-16 w-16 md:h-20 md:w-20' : 'h-20 w-20 md:h-28 md:w-28'}`}>
-          <img className="h-full w-full object-contain" src={logo} alt="Logo" />
-        </div>
+          <Link to="/">
+      <div className={`flex items-center transition-all duration-300 ${isScrolled ? 'h-16 w-16 md:h-20 md:w-20' : 'h-20 w-20 md:h-28 md:w-28'}`}>
+        <img className="h-full w-full object-contain" src={logo} alt="Logo" />
+      </div>
+    </Link>
 
         {/* Mobile menu button */}
         <div className="block md:hidden">
