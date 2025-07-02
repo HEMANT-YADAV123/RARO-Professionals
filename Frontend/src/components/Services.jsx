@@ -259,7 +259,7 @@ const Services = () => {
             >
               <span className="relative z-10">
                 Elevating Bridal Beauty & Salon Experiences with Excellence
-                Since 2015
+                Since 2012
                 <motion.div
                   className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-yellow-600"
                   initial={{ scaleX: 0 }}

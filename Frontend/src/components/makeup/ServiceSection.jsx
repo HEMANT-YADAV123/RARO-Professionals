@@ -84,7 +84,9 @@ const ServiceSection = ({
               </div>
               <div className={`h-px bg-gradient-to-r from-transparent via-yellow-400 to-transparent flex-1 ${
                 isPreBridalSection ? '' : 'animate-pulse'
-              }`}></div>
+              }`}>
+                
+              </div>
             </div>
             
             <h2 className={`
