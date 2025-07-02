@@ -1,7 +1,3 @@
-import React from "react";
-import Hero from "../components/Hero";
-import Services from "../components/AboutServices";
-import Reassurance from "../components/Reassurance";
 import Footer from "../components/Footer";
 import HeroSection from "../components/MeetFounder";
 import StressSection from "../components/Reassurance";

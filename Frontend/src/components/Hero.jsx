@@ -196,7 +196,7 @@ const CTASection = () => {
           >
             <p className="text-lg mb-2">Ready to look stunning?</p>
             <p className="text-[#D4AF37] font-medium">
-              Call us at +91 98765 43210
+              Call us at +91 84480 12334
             </p>
           </motion.div>
         </motion.div>

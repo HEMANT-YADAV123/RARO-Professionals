@@ -67,7 +67,7 @@ const StressSection = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-white text-5xl lg:text-7xl font-bold mb-8 leading-tight"
+            className="text-white text-4xl lg:text-7xl font-bold mb-8 leading-tight"
           >
             DON'T STRESS YOUR{' '}
             <span className="relative">
@@ -93,7 +93,7 @@ const StressSection = () => {
             <div className="relative p-8 border border-[#D4AF37]/30 rounded-2xl">
               <p className="text-[#D4AF37] text-2xl lg:text-3xl font-serif italic leading-relaxed">
                 You know we're the best! Dear bride-to-be,{' '}
-                <span className="text-white font-light">Raro Professionals</span> is at your service!
+                <span className="text-white font-light">Raro Professional</span> is at your service!
               </p>
             </div>
           </motion.div>

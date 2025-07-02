@@ -61,13 +61,13 @@ const Footer = () => {
                 <span className="flex-shrink-0 text-amber-500">
                   <PhoneCall size={16}/>
                 </span>
-                <p>+91 83695 49817</p>
+                <p>+91 84480 12334</p>
               </div>
               <div className="flex items-center space-x-2 text-gray-300 hover:text-amber-500 transition-all duration-300 cursor-pointer group">
                 <span className="flex-shrink-0 text-amber-500">
                   <Mail size={16}/>
                 </span>
-                <p>info@raro.in</p>
+                <p>raroprofessional@gmail.com</p>
               </div>
             </div>
           </div>

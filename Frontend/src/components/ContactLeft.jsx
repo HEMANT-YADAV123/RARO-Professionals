@@ -22,9 +22,9 @@ const ContactLeft = () => {
             className="text-3xl md:text-4xl text-[#c17e14] hover:text-[#d4921a] transition-colors duration-300 cursor-default"
             style={{ fontFamily: "Playball, cursive" }}
           >
-            BrideMeUp
+            Raro Professional
           </div>
-          <p className="text-sm md:text-base lg:text-[17px] leading-relaxed hover:text-gray-200 transition-colors duration-300">
+          <p className="text-lg md:text-lg lg:text-[20px] leading-relaxed hover:text-gray-200 transition-colors duration-300">
             Kindly fill out the form, and our beauty experts will get in touch
             with you shortly. For immediate assistance, feel free to reach out
             to us via the contact details provided below. We're here to enhance
@@ -47,7 +47,7 @@ const ContactLeft = () => {
           </div>
           <div className="flex gap-1 group hover:translate-x-1 transition-transform duration-300">
             <MapPin size={16} className="mt-1.5 flex-shrink-0 text-[#c17e14] group-hover:text-[#d4921a] transition-colors duration-300" />
-            <p className="text-sm md:text-base lg:text-[17px] group-hover:text-gray-200 transition-colors duration-300">
+            <p className="text-base md:text-lg lg:text-[20px] group-hover:text-gray-200 transition-colors duration-300">
               1981/4 First Floor, Railway Rd, opposite Anil Medical Store,
               Narela, Delhi, 110040
             </p>
@@ -70,11 +70,11 @@ const ContactLeft = () => {
           <div className="flex flex-col gap-2">
             <span className="flex gap-2.5 items-center group hover:translate-x-1 transition-all duration-300 hover:bg-gray-800/20 rounded-lg p-2 -ml-2">
               <Phone size={16} className="flex-shrink-0 text-[#c17e14] group-hover:text-[#d4921a] group-hover:scale-110 transition-all duration-300" />
-              <p className="text-sm md:text-base lg:text-[16px] mb-0.5 group-hover:text-gray-200 transition-colors duration-300">+91 84480 12334</p>
+              <p className="text-base md:text-lg lg:text-[17px] mb-0.5 group-hover:text-gray-200 transition-colors duration-300">+91 84480 12334</p>
             </span>
             <span className="flex gap-2.5 items-center group hover:translate-x-1 transition-all duration-300 hover:bg-gray-800/20 rounded-lg p-2 -ml-2">
               <Mail size={16} className="flex-shrink-0 text-[#c17e14] group-hover:text-[#d4921a] group-hover:scale-110 transition-all duration-300" />
-              <p className="text-sm md:text-base lg:text-[16px] mb-0.5 group-hover:text-gray-200 transition-colors duration-300">abc@gmail.com</p>
+              <p className="text-lg md:text-lg lg:text-[20px] mb-0.5 ml-1 group-hover:text-gray-200 transition-colors duration-300">raroprofessional@gmail.com</p>
             </span>
           </div>
         </div>
