@@ -37,7 +37,7 @@ const ServiceCard = ({
       </div>
 
       <div className="relative z-10">
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center justify-between mb-4  ">
           <h3 className={`
             font-serif text-xl font-bold text-yellow-400 uppercase tracking-wide
             transition-all duration-300 group-hover:text-yellow-300

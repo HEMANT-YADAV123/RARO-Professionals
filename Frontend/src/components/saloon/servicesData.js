@@ -41,7 +41,7 @@ export const servicesData = [
   },
   {
     id: 'split-ends-sitting',
-    title: 'Split Ends (Per Sitting)',
+    title: 'Split Ends Manually',
     description: 'Manual split end removal for healthier hair',
     image: './splitEnd.jpg',
     category: 'Hair & Chemical',
@@ -57,8 +57,8 @@ export const servicesData = [
   },
   {
     id: 'head-wash-loreal',
-    title: 'Head Wash (L\'Oreal/ Wella)',
-    description: 'Premium hair washing with L\'Oreal products',
+    title: 'Head Wash ',
+    description: 'Premium hair washing with L\'Oreal , Wella products',
     image: 'https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg',
     category: 'Hair & Chemical',
     brands: ['L\'Oreal / Wella'],
@@ -69,7 +69,7 @@ export const servicesData = [
   // Hair Styling
   {
     id: 'pressing-crimping',
-    title: 'Pressing/Crimping',
+    title: 'Pressing / Crimping',
     description: 'Heat styling for smooth, sleek or textured hair',
     image: './pressing.jpeg',
     category: 'Hair Styling',
@@ -132,8 +132,8 @@ export const servicesData = [
   // Global Colour
   {
     id: 'global-colour-matrix',
-    title: 'Global Colour (Matrix/ L\'Oreal/Wella) ',
-    description: 'Full hair coloring with Matrix professional colors',
+    title: 'Global Colours ',
+    description: 'Full hair coloring with Matrix , L\'Oreal and Wella professional colours',
     image: './hair.jpeg',
     category: 'Global Colour & Fashion Shades',
     brands: ['Matrix / L\'Oreal / Wella'],
@@ -231,21 +231,21 @@ export const servicesData = [
   // Cheryl's Facial
   {
     id: 'oxy-blast-facial',
-    title: 'Oxy Blast Facial',
-    description: 'Oxygenating facial for fresh, revitalized skin',
+    title: 'Lotus Citrus Facial',
+    description:  'Brightening facial with the goodness of citrus for clear, radiant skin',
     image: './facial6.jpeg',
     category: 'Facial & Cheryl\'s Facial',
-    brands: ['Cheryl\'s'],
-    features: ['Oxygen infusion', 'Deep cleansing', 'Skin revitalization']
+    brands: ['Lotus'],
+    features: ['Citrus extract', 'Skin brightening', 'Deep cleansing']
   },
   {
     id: 'vita-lift-facial',
-    title: 'Vita Lift Facial',
-    description: 'Anti-aging facial with lifting and firming effects',
+    title: 'Aroma Magic Facial',
+    description: 'Aromatherapy facial to relax, rejuvenate, and nourish the skin',
     image: './facial5.jpeg',
     category: 'Facial & Cheryl\'s Facial',
-    brands: ['Cheryl\'s'],
-    features: ['Lifting effect', 'Anti-aging', 'Skin firming']
+    brands: ['Aroma Magic'],
+    features:  ['Essential oils', 'Relaxing effect', 'Skin nourishment']
   },
 
   // Manicure & Pedicure
@@ -275,15 +275,6 @@ export const servicesData = [
     features: ['Professional products', 'Advanced treatment', 'Long-lasting results']
   },
   {
-    id: 'tbc-manicure',
-    title: 'TBC Manicure',
-    description: 'Specialized TBC manicure treatment',
-    image: './mani3.jpg',
-    category: 'Manicure & Pedicure',
-    brands: ['TBC'],
-    features: ['Specialized treatment', 'Quality products', 'Professional finish']
-  },
-  {
     id: 'basic-pedicure',
     title: 'Basic Pedicure',
     description: 'Essential foot care and nail grooming',
@@ -307,15 +298,6 @@ export const servicesData = [
     category: 'Manicure & Pedicure',
     brands: ['VLCC'],
     features: ['Professional grade', 'Advanced formulas', 'Comprehensive care']
-  },
-  {
-    id: 'tbc-pedicure',
-    title: 'TBC Pedicure',
-    description: 'Specialized TBC pedicure treatment',
-    image: './pedi3.jpeg',
-    category: 'Manicure & Pedicure',
-    brands: ['TBC'],
-    features: ['Specialized care', 'Quality treatment', 'Relaxing experience']
   }
 ];
 

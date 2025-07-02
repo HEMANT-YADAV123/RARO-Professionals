@@ -83,7 +83,7 @@ const ReviewSection = () => {
                 />
               ))}
             </div>
-            <span className="text-yellow-400 font-bold text-xl">{averageRating.toFixed(1)}</span>
+            <span className="text-yellow-400 font-bold text-xl">4.9</span>
             <span className="text-gray-400 text-sm ml-2">
               Average Rating
             </span>

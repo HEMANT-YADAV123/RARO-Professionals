@@ -36,7 +36,7 @@ const ServiceModal = ({ isOpen, onClose, service }) => {
         'Buildable coverage',
         'Professional airbrush equipment'
       ],
-      duration: '45-75 minutes',
+      duration: '90-120 minutes',
       benefits: [
         'Long-lasting wear (12+ hours)',
         'Natural, skin-like finish',
@@ -113,7 +113,7 @@ const ServiceModal = ({ isOpen, onClose, service }) => {
       {/* Modal */}
       <div className="relative bg-black border-2 border-yellow-400 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto hide-scrollbar animate-scale-in shadow-2xl shadow-yellow-400/20">
         {/* Header */}
-        <div className="relative p-6 border-b border-yellow-400/30">
+         <div className="sticky top-0 z-10 p-6 border-b border-yellow-400/30 bg-black">
           <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/10 via-transparent to-yellow-400/10" />
           <div className="relative flex items-center justify-between">
             <div className="flex items-center gap-3">
